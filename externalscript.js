@@ -11,7 +11,7 @@ let computerScore = 0;
 // The computer will need to randomly choose bw those three variables as well and that value stored as "computerSelection"
 //    const arrayRPS = ["rock","paper","scissors"]; - moving to just rock to make it easier
 function computerSelection() {
-    const arrayRPS = ["rock"];
+    const arrayRPS = ["rock","paper","scissors"];
     const computerChoice = arrayRPS [Math.floor (Math.random () * arrayRPS.length)]
     return computerChoice;
 }
@@ -23,17 +23,18 @@ console.log(playerSelection);
 // The game will be played (playRound) that will set playerSelection against computerSelection and return a string that declares the winner of the round like "You Lose! Paper beats Rock"
 //for some reason everything is now "it's a tie"...
 function playRound(playerSelection, computerSelection) {
-  if ((playerSelection === "rock") && (computerSelection.toLowerCase() === "scissors")) {
-    console.log("You lose!");
-  } else if (playerSelection === "paper" && computerSelection.toLowerCase() === "rock") {
-    console.log("You lose!");
-  } else if (playerSelection === "scissors" && computerSelection.toLowerCase() === "paper") {
-    console.log("You lose!");
-  } else if (playerSelection === computerSelection) {
-    console.log("It's a tie!");
-  } else {
-    console.log("You won!!!");
-  }
+  if ((playerSelection === "rock") && (computerSelection === "rock")) {
+    console.log("A Tie!");
+  } 
+  
+  if (playerSelection === "paper" && computerSelection === "rock") {
+    console.log("You win!");
+  } 
+  
+  if (playerSelection === "scissors" && computerSelection === "paper") {
+    console.log("Computer Wins!");
+  } 
+  
 }
 
 // playerSelection param should be case-insensitive
