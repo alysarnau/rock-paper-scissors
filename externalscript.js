@@ -22,15 +22,18 @@ const playerSelection = prompt("Please make your play: rock, paper, or scissors!
 
 // The game will be played (computerPlay) that will set playerSelection against computerSelection and return a string that declares the winner of the round like "You Lose! Paper beats Rock"
 // each round should be the playRound function
+//for some reason everything is now "it's a tie"...
 function playRound(playerSelection, computerSelection) {
-  if (computerSelection == "0" &&  playerSelection == "Paper") {
-      alert("Computer won :(");
-  } else if (computerSelection == "1" &&  playerSelection == "Paper") {
-      alert("Tie!");
-  } else if (computerSelection == "2" &&  playerSelection == "Paper") {
-     alert("You won!");
+  if (computerSelection === playerSelection) {
+      alert("It's a tie!");
+  } else if (computerSelection == "rock" &&  playerSelection == "scissors") {
+      alert("You lose!");
+  } else if (computerSelection == "paper" &&  playerSelection == "rock") {
+     alert("You lose!");
+  } else if (computerSelection == "scissors" && playerSelection == "paper") {
+     alert("You lose!");
   } else {
-     alert("how did you get this message???");
+     alert("You won!!!");
   }
 }
 
