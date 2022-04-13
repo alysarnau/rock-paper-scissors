@@ -69,15 +69,17 @@ function game () {
       default:
         alert("oops");
         }
-
-//    if playerScore
+    }
+  // reporting on a winner  
+  if (playerScore > computerScore) {
+    alert("You won! Woooooo!!!!!");
+  } else if (computerScore > playerScore) {
+    alert("You lose, booooooooo!");
+  } else {
+    alert("You got a very statistically improbable tie. Well done I guess!")
   }
 }  
 
-// The game will be played (playRound) that will set playerSelection against computerSelection and return a string that declares the winner of the round like "You Lose! Paper beats Rock"
-
-
-// we will start with both sides at 0
 
   
 // we will need to report a winner in the end
