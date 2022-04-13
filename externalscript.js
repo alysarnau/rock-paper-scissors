@@ -46,7 +46,8 @@ function game () {
     const computerSelection = computerPlay();
     console.log(playRound(playerSelection, computerSelection));
 
-    switch (playRound) {
+    //remember to put the variables after the function!
+    switch (playRound(playerSelection, computerSelection)) {
       case "win":
         alert("Congrats, you won!");
         break;
