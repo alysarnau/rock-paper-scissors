@@ -24,23 +24,23 @@ function game () {
   for (let i = 0; i < 5; i++) {
 // conditions for win lose tie
     function playRound(playerSelection, computerSelection) {
-      if (playerSelection === "rock" && computerSelection === "rock") {
+      if (playerSelection.toLowerCase() === "rock" && computerSelection === "rock") {
         return("tie");
-      } else if (playerSelection === "rock" && computerSelection === "paper") {
+      } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
         return("lose");
-      } else if (playerSelection === "rock" && computerSelection === "scissors") {
+      } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
         return("win");
-      } else if (playerSelection === "paper" && computerSelection === "rock") {
+      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
         return("win");
-      } else if (playerSelection === "paper" && computerSelection === "paper") {
+      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "paper") {
         return("tie");
-      } else if (playerSelection === "paper" && computerSelection === "scissors") {
+      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
         return("lose");
-      } else if (playerSelection === "scissors" && computerSelection === "rock") {
+      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
         return("lose");
-      } else if (playerSelection === "scissors" && computerSelection === "paper") {
+      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
         return("win");
-      } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "scissors") {
         return("tie");
       } 
     } 
@@ -54,40 +54,41 @@ function game () {
     switch (playRound(playerSelection, computerSelection)) {
       case "win":
         alert("Congrats, you won!");
-        playerScore++;
-        alert("Your score is now ${playerScore} and the Computer's score is now ${computerScore}.");
+        ++playerScore;
+        console.log('Your score:' + playerScore);
+        console.log('CPU score:' + computerScore);
         break;
       case "tie":
         alert("It's a tie!");
-        alert("Your score is now ${playerScore} and the Computer's score is now ${computerScore}.");
+        console.log('Your score:' + playerScore);
+        console.log('CPU score:' + computerScore);
         break;
       case "lose":
         alert("Boo, you lost!");
-        computerScore++;
-        alert("Your score is now ${playerScore} and the Computer's score is now ${computerScore}.");
+        ++computerScore;
+        console.log('Your score:' + playerScore);
+        console.log('CPU score:' + computerScore);
         break;
       default:
         alert("oops");
         }
     }
-  // reporting on a winner  
-  if (playerScore > computerScore) {
-    alert("You won! Woooooo!!!!!");
-  } else if (computerScore > playerScore) {
-    alert("You lose, booooooooo!");
-  } else {
-    alert("You got a very statistically improbable tie. Well done I guess!")
-  }
-}  
-
-
-  
 // we will need to report a winner in the end
 // this can be comparative
 // if playerScore > computerScore, alert Player winner
 //   else if computerScore > playerScore, alert Computer winner
 //   else alert tie (it's unlikely but not impossible) 
-  
+  if (playerScore > computerScore) {
+    alert("You won! Woooooo!!!!!");
+  } else if (computerScore > playerScore) {
+    alert("You lose, booooooooo!");
+  } else {
+    alert("You got a somewhat statistically improbable tie. Well done, I guess!")
+  }
+}  
+
+
+
 
   
 
