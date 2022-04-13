@@ -45,6 +45,20 @@ function game () {
     let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
     const computerSelection = computerPlay();
     console.log(playRound(playerSelection, computerSelection));
+
+    switch (playRound) {
+      case "win":
+        alert("Congrats, you won!");
+        break;
+      case "tie":
+        alert("It's a tie!");
+        break;
+      case "lose":
+        alert("Boo, you lost!");
+        break;
+      default:
+        alert("oops");
+        }
   }
 }  
 
