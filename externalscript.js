@@ -18,33 +18,59 @@ function computerPlay() {
 //prompt player to choose their selection
 // let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
 
+// the game function will nest the play Round for 5 times
+function game () {
+  for (let i = 0; i < 5; i++) {
+      function playRound(playerSelection, computerSelection) {
+      if (playerSelection === "rock" && computerSelection === "rock") {
+        return("tie");
+      } else if (playerSelection === "rock" && computerSelection === "paper") {
+        return("lose");
+      } else if (playerSelection === "rock" && computerSelection === "scissors") {
+        return("win");
+      } else if (playerSelection === "paper" && computerSelection === "rock") {
+        return("win");
+      } else if (playerSelection === "paper" && computerSelection === "paper") {
+        return("tie");
+      } else if (playerSelection === "paper" && computerSelection === "scissors") {
+        return("lose");
+      } else if (playerSelection === "scissors" && computerSelection === "rock") {
+        return("lose");
+      } else if (playerSelection === "scissors" && computerSelection === "paper") {
+        return("win");
+      } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+        return("tie");
+      } 
+    } 
+    let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+  }
+}  
 
 // The game will be played (playRound) that will set playerSelection against computerSelection and return a string that declares the winner of the round like "You Lose! Paper beats Rock"
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "rock") {
-      return("tie");
-    } else if (playerSelection === "rock" && computerSelection === "paper") {
-      return("lose");
-    } else if (playerSelection === "rock" && computerSelection === "scissors") {
-      return("win");
-    } else if (playerSelection === "paper" && computerSelection === "rock") {
-      return("win");
-    } else if (playerSelection === "paper" && computerSelection === "paper") {
-      return("tie");
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
-      return("lose");
-    } else if (playerSelection === "scissors" && computerSelection === "rock") {
-      return("lose");
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
-      return("win");
-    } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-      return("tie");
-    } 
-  } 
+//function playRound(playerSelection, computerSelection) {
+  //  if (playerSelection === "rock" && computerSelection === "rock") {
+    //  return("tie");
+    //} else if (playerSelection === "rock" && computerSelection === "paper") {
+    //  return("lose");
+    //} else if (playerSelection === "rock" && computerSelection === "scissors") {
+    //  return("win");
+    //} else if (playerSelection === "paper" && computerSelection === "rock") {
+  //  //  return("win");
+  //  } else if (playerSelection === "paper" && computerSelection === "paper") {
+  //    return("tie");
+  //  } else if (playerSelection === "paper" && computerSelection === "scissors") {
+  //    return("lose");
+  //  } else if (playerSelection === "scissors" && computerSelection === "rock") {
+  //    return("lose");
+  //  } else if (playerSelection === "scissors" && computerSelection === "paper") {
+  //    return("win");
+  //  } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+  //    return("tie");
+  //  } 
+  //} 
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
 
 /* we will start with both sides at 0
 function game() {
