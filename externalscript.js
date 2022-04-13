@@ -14,49 +14,40 @@ function computerPlay() {
     return computerChoice;
 }
 
+console.log(computerPlay());
+
+//prompt player to choose their selection
+let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
+
+
 // The game will be played (playRound) that will set playerSelection against computerSelection and return a string that declares the winner of the round like "You Lose! Paper beats Rock"
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "rock" && computerSelection === "rock") {
       return("tie");
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-	  return("lose");
+      return("lose");
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
-	  return("win");
+      return("win");
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-	  return("win");
+      return("win");
     } else if (playerSelection === "paper" && computerSelection === "paper") {
-	  return("tie");
+      return("tie");
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
-	  return("lose");
+      return("lose");
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-	  return("lose");
+      return("lose");
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-	  return("win");
+      return("win");
     } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-	  return("tie");
+      return("tie");
     } 
   } 
 
-// we will start with both sides at 0
+/* we will start with both sides at 0
 function game() {
   let playerScore = 0;
   let computerScore = 0;   
-}
+  
+  for (let i = 0; i < 1; i++) { */
+  
 
-// Player input to select between three variables, rock paper and scissors, and save var as "playerSelection"
-let playerSelection = prompt("Please make your play: rock, paper, or scissors!");
-console.log(playerSelection);
-
-//value stored as "computerSelection"
-let computerSelection = computerPlay();
-
-
-// console.log(playRound());
-
-
-/* playerSelection param should be case-insensitive
-
-// if win, result will be a win message
-// if lose, result will be a lose message
-
-// function computerPlay */
