@@ -14,10 +14,9 @@ function computerPlay() {
     return computerChoice;
 }
 
-console.log(computerPlay());
 
 //prompt player to choose their selection
-let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
+// let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
 
 
 // The game will be played (playRound) that will set playerSelection against computerSelection and return a string that declares the winner of the round like "You Lose! Paper beats Rock"
@@ -42,6 +41,10 @@ function playRound(playerSelection, computerSelection) {
       return("tie");
     } 
   } 
+
+const playerSelection = "rock";
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
 
 /* we will start with both sides at 0
 function game() {
