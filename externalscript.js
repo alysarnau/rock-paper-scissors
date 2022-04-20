@@ -1,4 +1,4 @@
-
+/*
 // The computer will need to randomly choose bw those three variables as well (computerPlay) and that value stored as "computerSelection"
 function computerPlay() {
     let arrayRPS = ["rock", "paper", "scissors"];
@@ -34,9 +34,9 @@ function game () {
       } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "scissors") {
         return("tie");
       } 
-//    } 
+    } 
 
-    let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
+    let playerSelection // = prompt("Choose your fighter: rock, paper, or scissors!")
     const computerSelection = computerPlay();
     console.log(playRound(playerSelection, computerSelection));
 
@@ -69,21 +69,25 @@ function game () {
     alert("You lose, booooooooo!");
   } else {
     alert("You got a somewhat statistically improbable tie. Well done, I guess!")
-  }
-}  
-
-// const buttons, link all buttons to play a round of RPS
-// const rock, link rock button to select rock
-// const paper, link paper button to select paper
-// const scissors, link scissors button to select scissors
-
-// create div for Result section
-// append this div to below .btns div
-// this section should display the running score
-
-// and at end of 5 rounds, display win lose tie message
-// play audio cue?
+  } */
+// }  
 
 
+// const buttons
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
+
+
+      // const rock, link rock button to select rock
+      // const paper, link paper button to select paper
+      // const scissors, link scissors button to select scissors
+  
+      // create div for Result section
+      // append this div to below .btns div
+      // this section should display the running score
+  
+      // and at end of 5 rounds, display win lose tie message
+      // play audio cue?
   
 

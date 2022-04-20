@@ -3,16 +3,39 @@
     <head>
         <meta charset="UTF-8">
         <title>ROCK PAPER SCISSORS</title>
-        <script type="text/javascript" src="externalscript.js"></script>
     </head>
     <body>
 
-      <h1>Rock, Paper, Scissors!</h1>
-      <div class="btns">
+      <h1>The Gentleperson's Game</h1>
+      <h2>Choose your fighter: rock, paper, or scissors.</h2>
+      <div class="buttons">
           <button class="btn" id="rock">Rock</button>
           <button class="btn" id="paper">Paper</button>
           <button class="btn" id="scissors">Scissors</button>
       </div>
 
-    </body>
+<script>
+// assign consts for buttons
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
+
+// see if basic event handlers work
+rockBtn.addEventListener('click', function(e) {
+    console.log("rock");
+});
+
+paperBtn.addEventListener('click', function(e) {
+    console.log("paper");
+});
+
+scissorsBtn.addEventListener('click', function(e) {
+    console.log("scissors");
+});
+
+</script>
+
+
+  
+      </body>
 </html>
