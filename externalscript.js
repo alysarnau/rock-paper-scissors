@@ -1,13 +1,5 @@
-// this will be in a five round game that keeps score over time - 
-
-// this function will report a winner or loser at the end   
-    
-// The computer will have a choice of three random variables (rock paper scissors), called computerPlay
-// 0 is rock, 1 is paper, 2 is scissors
-
 
 // The computer will need to randomly choose bw those three variables as well (computerPlay) and that value stored as "computerSelection"
-// AT LEAST WE KNOW THIS WORKS!!!
 function computerPlay() {
     let arrayRPS = ["rock", "paper", "scissors"];
     let computerChoice = arrayRPS [Math.floor (Math.random () * arrayRPS.length)]
@@ -17,7 +9,6 @@ function computerPlay() {
 
 // the game function will nest the play Round for 5 times
 function game () {
-//start game with both scores at Zero
   let playerScore = 0;
   let computerScore = 0;  
 // five rounds
@@ -44,13 +35,11 @@ function game () {
         return("tie");
       } 
 //    } 
-     //prompt player to choose their selection
+
     let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
-    //set computerPlay() value stored as "computerSelection"
     const computerSelection = computerPlay();
     console.log(playRound(playerSelection, computerSelection));
 
-    //remember to put the variables after the function!
     switch (playRound(playerSelection, computerSelection)) {
       case "win":
         alert("Congrats, you won!");
@@ -73,11 +62,7 @@ function game () {
         alert("oops");
         }
     }
-// we will need to report a winner in the end
-// this can be comparative
-// if playerScore > computerScore, alert Player winner
-//   else if computerScore > playerScore, alert Computer winner
-//   else alert tie (it's unlikely but not impossible) 
+
   if (playerScore > computerScore) {
     alert("You won! Woooooo!!!!!");
   } else if (computerScore > playerScore) {
@@ -87,7 +72,17 @@ function game () {
   }
 }  
 
+// const buttons, link all buttons to play a round of RPS
+// const rock, link rock button to select rock
+// const paper, link paper button to select paper
+// const scissors, link scissors button to select scissors
 
+// create div for Result section
+// append this div to below .btns div
+// this section should display the running score
+
+// and at end of 5 rounds, display win lose tie message
+// play audio cue?
 
 
   
