@@ -21,7 +21,7 @@ function game () {
   let playerScore = 0;
   let computerScore = 0;  
 // five rounds
-  for (let i = 0; i < 5; i++) {
+//  for (let i = 0; i < 5; i++) {
 // conditions for win lose tie
     function playRound(playerSelection, computerSelection) {
       if (playerSelection.toLowerCase() === "rock" && computerSelection === "rock") {
@@ -43,7 +43,7 @@ function game () {
       } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "scissors") {
         return("tie");
       } 
-    } 
+//    } 
      //prompt player to choose their selection
     let playerSelection = prompt("Choose your fighter: rock, paper, or scissors!")
     //set computerPlay() value stored as "computerSelection"
