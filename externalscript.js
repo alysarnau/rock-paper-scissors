@@ -15,29 +15,27 @@ function game () {
 //  for (let i = 0; i < 5; i++) {
 // conditions for win lose tie
     function playRound(playerSelection, computerSelection) {
-      if (playerSelection.toLowerCase() === "rock" && computerSelection === "rock") {
+      if (playerSelection === "rock" && computerSelection === "rock") {
         return("tie");
-      } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
+      } else if (playerSelection === "rock" && computerSelection === "paper") {
         return("lose");
-      } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
+      } else if (playerSelection === "rock" && computerSelection === "scissors") {
         return("win");
-      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
+      } else if (playerSelection === "paper" && computerSelection === "rock") {
         return("win");
-      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "paper") {
+      } else if (playerSelection === "paper" && computerSelection === "paper") {
         return("tie");
-      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
+      } else if (playerSelection === "paper" && computerSelection === "scissors") {
         return("lose");
-      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
+      } else if (playerSelection === "scissors" && computerSelection === "rock") {
         return("lose");
-      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
+      } else if (playerSelection === "scissors" && computerSelection === "paper") {
         return("win");
-      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "scissors") {
+      } else if (playerSelection === "scissors" && computerSelection === "scissors") {
         return("tie");
       } 
     } 
 
-    const computerSelection = computerPlay();
-//    console.log(playRound(playerSelection, computerSelection));
 /*
     switch (playRound(playerSelection, computerSelection)) {
       case "win":
@@ -79,19 +77,23 @@ const scissorsBtn = document.querySelector('#scissors');
 
 // see if basic event handlers work
 rockBtn.addEventListener('click', function(e) {
-    let playerSelection = "rock";
-    console.log(playerSelection);
-    
+    const playerSelection = "rock";
+    const computerSelection = computerPlay();
+    playRound(playerSelection,computerSelection)
 });
 
 paperBtn.addEventListener('click', function(e) {
-    let playerSelection = "paper";
-    console.log(playerSelection);
+    const playerSelection = "paper";
+    const computerSelection = computerPlay();
+    playRound(playerSelection,computerSelection);
+    console.log(playRound);
 });
 
 scissorsBtn.addEventListener('click', function(e) {
-    let playerSelection = "scissors";
-    console.log(playerSelection);
+    const playerSelection = "scissors";
+    const computerSelection = computerPlay();
+    playRound(playerSelection,computerSelection);
+    console.log(playRound);
 })
 
 /* create div for Result section
