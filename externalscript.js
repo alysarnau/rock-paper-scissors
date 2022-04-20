@@ -1,4 +1,4 @@
-/*
+
 // The computer will need to randomly choose bw those three variables as well (computerPlay) and that value stored as "computerSelection"
 function computerPlay() {
     let arrayRPS = ["rock", "paper", "scissors"];
@@ -10,7 +10,7 @@ function computerPlay() {
 // the game function will nest the play Round for 5 times
 function game () {
   let playerScore = 0;
-  let computerScore = 0;  
+  let computerScore = 0;  }
 // five rounds
 //  for (let i = 0; i < 5; i++) {
 // conditions for win lose tie
@@ -36,10 +36,9 @@ function game () {
       } 
     } 
 
-    let playerSelection // = prompt("Choose your fighter: rock, paper, or scissors!")
     const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-
+//    console.log(playRound(playerSelection, computerSelection));
+/*
     switch (playRound(playerSelection, computerSelection)) {
       case "win":
         alert("Congrats, you won!");
@@ -73,21 +72,31 @@ function game () {
 // }  
 
 
-// const buttons
+// assign consts for buttons
 const rockBtn = document.querySelector('#rock');
 const paperBtn = document.querySelector('#paper');
 const scissorsBtn = document.querySelector('#scissors');
 
+// see if basic event handlers work
+rockBtn.addEventListener('click', function(e) {
+    let playerSelection = "rock";
+    console.log(playerSelection);
+    
+});
 
-      // const rock, link rock button to select rock
-      // const paper, link paper button to select paper
-      // const scissors, link scissors button to select scissors
-  
-      // create div for Result section
-      // append this div to below .btns div
-      // this section should display the running score
-  
-      // and at end of 5 rounds, display win lose tie message
-      // play audio cue?
-  
+paperBtn.addEventListener('click', function(e) {
+    let playerSelection = "paper";
+    console.log(playerSelection);
+});
 
+scissorsBtn.addEventListener('click', function(e) {
+    let playerSelection = "scissors";
+    console.log(playerSelection);
+})
+
+/* create div for Result section
+append this div to below .btns div
+this section should display the running score
+  
+and at end of 5 rounds, display win lose tie message
+*/
