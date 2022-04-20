@@ -6,15 +6,16 @@ function computerPlay() {
     return computerChoice;
 }
 
+let playerScore = 0;
+let computerScore = 0;
 
 // the game function will nest the play Round for 5 times
 function game () {
   let playerScore = 0;
   let computerScore = 0;  }
-// five rounds
 //  for (let i = 0; i < 5; i++) {
 // conditions for win lose tie
-    function playRound(playerSelection, computerSelection) {
+    function whoWins(playerSelection, computerSelection) {
       if (playerSelection === "rock" && computerSelection === "rock") {
         return("tie");
       } else if (playerSelection === "rock" && computerSelection === "paper") {
@@ -36,8 +37,9 @@ function game () {
       } 
     } 
 
-/*
-    switch (playRound(playerSelection, computerSelection)) {
+//need to update player score display
+function playRound(playerSelection,computerSelection) { 
+  switch (whoWins(playerSelection, computerSelection)) {
       case "win":
         alert("Congrats, you won!");
         ++playerScore;
@@ -58,8 +60,10 @@ function game () {
       default:
         alert("oops");
         }
-    }
+      }
+    
 
+/*
   if (playerScore > computerScore) {
     alert("You won! Woooooo!!!!!");
   } else if (computerScore > playerScore) {
@@ -86,19 +90,19 @@ paperBtn.addEventListener('click', function(e) {
     const playerSelection = "paper";
     const computerSelection = computerPlay();
     playRound(playerSelection,computerSelection);
-    console.log(playRound);
 });
 
 scissorsBtn.addEventListener('click', function(e) {
     const playerSelection = "scissors";
     const computerSelection = computerPlay();
     playRound(playerSelection,computerSelection);
-    console.log(playRound);
 })
 
-/* create div for Result section
-append this div to below .btns div
-this section should display the running score
-  
-and at end of 5 rounds, display win lose tie message
-*/
+// create div for Result section
+const buttons = document.querySelector(".buttons");
+const score = document.createElement('div');
+//append this div to below .btns div
+buttons.appendChild(score);
+//this section should display the running score
+score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
+//and at end of 5 rounds, display win lose tie message
