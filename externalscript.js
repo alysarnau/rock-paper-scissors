@@ -64,6 +64,7 @@ function playRound(playerSelection,computerSelection) {
 const rockBtn = document.querySelector('#rock');
 const paperBtn = document.querySelector('#paper');
 const scissorsBtn = document.querySelector('#scissors');
+const reset = document.querySelector('#reset');
 
 // see if basic event handlers work
 rockBtn.addEventListener('click', function(e) {
@@ -85,12 +86,16 @@ scissorsBtn.addEventListener('click', function(e) {
 })
 
 
+reset.addEventListener('click', function (e) {
+  location.reload();
+})
+
 const buttons = document.querySelector(".buttons");
 // create desc for win lose per match
 const desc = document.createElement('div');
 buttons.appendChild(desc);
 desc.setAttribute('class','desc');
-// NEED TO SET THIS TO RESET
+// NEED TO SET THIS TO RESET?
 // create div for score section
 const score = document.createElement('div');
 //append this div to below .btns div
@@ -109,3 +114,5 @@ if (result = 5) {
       alert("oops");
       }
     }; */
+
+    //create reset button
