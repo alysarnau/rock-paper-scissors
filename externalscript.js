@@ -47,11 +47,11 @@ function playRound(playerSelection,computerSelection) {
         score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
         break;
       case "tie":
-        alert("It's a tie!");
+        desc.textContent = "It's a tie!";
         score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
         break;
       case "lose":
-        alert("Boo, you lost!");
+        desc.textContent = "Boo, you lost!";
         ++computerScore;
         score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
         break;
