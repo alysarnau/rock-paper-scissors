@@ -56,7 +56,17 @@ function playRound(playerSelection,computerSelection) {
       default:
         alert("oops");
         }
+
+        let result = (`${computerScore} + ${playerScore}`)
+
+        if (result = 5) {
+          if (playerScore >= 3) {
+              alert("Congrats, you won!");
+          } else if (computerScore >= 3) {
+              alert("Boo, you lost!");
+          } else return;
       }
+    };
 
 
 
@@ -102,17 +112,5 @@ const score = document.createElement('div');
 buttons.appendChild(score);
 //this section should display the running score
 score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
-//and at end of 5 rounds, display win lose tie message
-// still need to get this to work
-/* let result = (`${computerScore} + ${playerScore}`)
-if (result = 5) {
-  if (playerScore >= 3) {
-      alert("Congrats, you won!");
-  } else if(computerScore >= 3) {
-      alert("Boo, you lost!");
-  } else {
-      alert("oops");
-      }
-    }; */
-
-    //create reset button
+// CREATE DIV FOR FINAL RESULT
+// REPLACE ALERT IN RESULT
