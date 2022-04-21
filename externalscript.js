@@ -110,6 +110,7 @@ const score = document.createElement('div');
 buttons.appendChild(score);
 //this section should display the running score
 score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
+score.setAttribute('id','score');
 // CREATE DIV FOR FINAL RESULT
 const finalResult = document.createElement('div');
 buttons.appendChild(finalResult);
