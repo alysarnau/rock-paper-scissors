@@ -13,7 +13,6 @@ let computerScore = 0;
 function game () {
   let playerScore = 0;
   let computerScore = 0;  }
-//  for (let i = 0; i < 5; i++) {
 // conditions for win lose tie
     function whoWins(playerSelection, computerSelection) {
       if (playerSelection === "rock" && computerSelection === "rock") {
