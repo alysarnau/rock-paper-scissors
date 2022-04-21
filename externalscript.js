@@ -61,9 +61,9 @@ function playRound(playerSelection,computerSelection) {
 
         if (result = 5) {
           if (playerScore >= 3) {
-              alert("Congrats, you won!");
+            finalResult.textContent ="Congrats, you won best of five!";
           } else if (computerScore >= 3) {
-              alert("Boo, you lost!");
+            finalResult.textContent ="Boo, you lost best of five!";
           } else return;
       }
     };
@@ -113,4 +113,7 @@ buttons.appendChild(score);
 //this section should display the running score
 score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
 // CREATE DIV FOR FINAL RESULT
-// REPLACE ALERT IN RESULT
+const finalResult = document.createElement('div');
+buttons.appendChild(finalResult);
+finalResult.setAttribute('id','result');
+
