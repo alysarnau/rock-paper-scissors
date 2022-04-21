@@ -57,9 +57,7 @@ function playRound(playerSelection,computerSelection) {
         alert("oops");
         }
 
-        let result = (`${computerScore} + ${playerScore}`)
-
-        if (result = 5) {
+        if ((computerScore === 5) || (playerScore === 5)) {
           if (playerScore >= 3) {
             finalResult.textContent ="Congrats, you won best of five!";
           } else if (computerScore >= 3) {
