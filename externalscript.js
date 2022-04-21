@@ -37,8 +37,7 @@ function game () {
       } 
     } 
 
-//update player score display
-// need to add div to display win or los
+//updates player score display
 function playRound(playerSelection,computerSelection) { 
   switch (whoWins(playerSelection, computerSelection)) {
       case "win":
@@ -59,17 +58,7 @@ function playRound(playerSelection,computerSelection) {
         alert("oops");
         }
       }
-    
-//turn this into a div!!!
-/*
-  if (playerScore > computerScore) {
-    alert("You won! Woooooo!!!!!");
-  } else if (computerScore > playerScore) {
-    alert("You lose, booooooooo!");
-  } else {
-    alert("You got a somewhat statistically improbable tie. Well done, I guess!")
-  } */
-// }  
+
 
 
 // assign consts for buttons
