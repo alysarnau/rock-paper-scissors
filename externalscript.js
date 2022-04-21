@@ -37,11 +37,12 @@ function game () {
       } 
     } 
 
-//need to update player score display
+//update player score display
+// need to add div to display win or los
 function playRound(playerSelection,computerSelection) { 
   switch (whoWins(playerSelection, computerSelection)) {
       case "win":
-        alert("Congrats, you won!");
+        desc.textContent ="Congrats, you won!";
         ++playerScore;
         score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
         break;
@@ -95,11 +96,28 @@ scissorsBtn.addEventListener('click', function(e) {
     playRound(playerSelection,computerSelection);
 })
 
-// create div for Result section
+
 const buttons = document.querySelector(".buttons");
+// create desc for win lose per match
+const desc = document.createElement('div');
+buttons.appendChild(desc);
+desc.setAttribute('class','desc');
+// NEED TO SET THIS TO RESET
+// create div for score section
 const score = document.createElement('div');
 //append this div to below .btns div
 buttons.appendChild(score);
 //this section should display the running score
 score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
 //and at end of 5 rounds, display win lose tie message
+// still need to get this to work
+/* let result = (`${computerScore} + ${playerScore}`)
+if (result = 5) {
+  if (playerScore >= 3) {
+      alert("Congrats, you won!");
+  } else if(computerScore >= 3) {
+      alert("Boo, you lost!");
+  } else {
+      alert("oops");
+      }
+    }; */
