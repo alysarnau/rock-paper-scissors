@@ -43,26 +43,23 @@ function playRound(playerSelection,computerSelection) {
       case "win":
         alert("Congrats, you won!");
         ++playerScore;
-        console.log('Your score:' + playerScore);
-        console.log('CPU score:' + computerScore);
+        score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
         break;
       case "tie":
         alert("It's a tie!");
-        console.log('Your score:' + playerScore);
-        console.log('CPU score:' + computerScore);
+        score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
         break;
       case "lose":
         alert("Boo, you lost!");
         ++computerScore;
-        console.log('Your score:' + playerScore);
-        console.log('CPU score:' + computerScore);
+        score.textContent = `Computer Score: ${computerScore} | Player Score: ${playerScore}`;
         break;
       default:
         alert("oops");
         }
       }
     
-
+//turn this into a div!!!
 /*
   if (playerScore > computerScore) {
     alert("You won! Woooooo!!!!!");
